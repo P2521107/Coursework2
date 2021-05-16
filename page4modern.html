@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CW2 Prototype</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="css/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+
+
+<!--Page fade in -->
+
+
+      <svg id="fader"></svg>
+             <script>
+                 fadeInPage();
+
+                 function fadeInPage() {
+                   if (!window.AnimationEvent) { return; }
+                   var fader = document.getElementById('fader');
+        fader.classList.add('fade-out');
+    }
+             </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Header -->
+
+          <div class="Header">
+
+          <img src= "image/mainlogo.jpg" alt="logo">
+
+          </div>
+
+
+
+
+
+
+
+<!-- Navbar -->
+
+
+<div class="topnav4" id="myTopnav4">
+  <a href="index.html" class="active">⌂</a>
+  <a href="page1.html">The Ancient Egyptions</a>
+  <a href="page2victorian.html">The Victorian Era</a>
+  <a href="page3elizabethan.html">The Elizabethan Era</a>
+  <a href="page4modern.html">Today</a>
+  <div class="dropdown">
+    <button class="dropbtn">☰
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="page4text.html">Enlarge Text</a>
+      <a href="page4black.html">Dark mode</a>
+      <a href="page4yellow.html">Yellow mode</a>
+    </div>
+  </div>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div style="padding-left:16px">
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav4");
+  if (x.className === "topnav4") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav4";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Ripper paper effect: -->
+
+
+
+      <div class="content-main">
+                <div class="content-box">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                  <!-- Header -->
+
+                  <h4 id="meh">Make-up Today</h4>
+
+
+                    <a href="https://twitter.com/TheHistoryOfMa1"><img src="image/twitter.png" alt="twitterlogo" style="width:50px;height:50px; align-items: center;"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modern text -->
+
+
+
+                <p id="met">Make-up today has evolved into movements of demanding safe chemicals in products and no animal testing. It reflects how the make-up and cosmetics market is worth billions today, as consumers want to ensure the products they buy are safe to use. Today, the make-up world is led by beauty influencers of Instagram and YouTube, such as Jeffree Star, Tati, James Charles and more. One important aspect of make-up that has evolved throughout history, is the fact it has become normalised for men to also wear it today in society, especially within the scene of drag. The most popular drag TV show, embracing this acceptance in society and the positive changes, is the show RuPaul’s Drag Race.
+                </p>
+
+
+<!--Button for audio -->
+
+
+
+
+                <button class="hearbutton">🔊Press play to listen to the text🔊
+
+                  <br>
+                  <br>
+
+                <audio controls>
+                  <source src="audio/today-audio.mp4" type="audio/mp4">
+                      <source src="audio/today.m4a" type="audio/m4a">
+                Your browser does not support the audio element.
+                </audio>
+                </button>
+
+
+<br>
+<br>
+
+<!--Image hover overlay-->
+
+
+<div class="container">
+  <img src="image/makeup1.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">Make-up today is relatively safe, it goes through federal testing before it is sold on the market to ensure it has no harmful ingredients. However, there are movements today in an attempt to stop testing such as animal testing. Make-up now has evolved and comes in palettes and proper components, without household ingredients!</div>
+  </div>
+</div>
+
+
+
+
+<br>
+<br>
+
+
+
+<!--Image Strip-->
+
+
+<img src="image/strip.PNG" alt="strip">
+
+
+
+<br>
+<br>
+
+
+
+<!-- Slideshow-->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 4</div>
+  <img src="image/4slideshow2.PNG" alt="pp10" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 4</div>
+  <img src="image/4slideshow3.PNG" alt="p11" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 4</div>
+  <img src="image/4slideshow4.PNG" alt="pp12" style="width:100%">
+</div>
+
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 4</div>
+  <img src="image/4slideshow42.PNG" alt="pp13" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+<br>
+
+
+
+
+
+<!--Pagination-->
+
+<center>
+              <div class="pagination">
+                <a href="page1.html">&laquo;</a>
+                <a href="page1.html">1</a>
+                <a href="page2victorian.html">2</a>
+                <a href="page3elizabethan.html">3</a>
+<a class="active" href="page4modern.html">4</a>
+                <a href="page4modern.html">&raquo;</a>
+              </div>
+
+
+
+</center>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+<!--Footer-->
+
+
+
+<div class="footer">
+
+<a href="page3elizabethan.html" class="btn6">Previous </a>
+
+
+
+
+<p id="ft3"> By Melisa Vasileva
+  <br>
+P2521107 </p>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

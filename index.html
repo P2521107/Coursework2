@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CW2 Prototype</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="css/style.css" type="text/css" rel="stylesheet" />
+  </head>
+<body>
+
+
+
+
+  <!-- Viewport Tag: To ensure that the website is responsive, one important element included adding the <meta> tag (<meta name="viewport" content="width=device-width, initial-scale=1.0”>) to every page of the website. Using this tag set’s the viewport of the page and it tells the browser to adjust the page in terms of its dimensions when opened on different sized screens. This tag is mainly helpful to make a page responsive for mobile devices, as the initial scale is set to 1.0. For example, if the website is opened on a moblile, the scaling of the website will decrease to fit the size of a smaller screen. To make the website responsive for desktop, other codes helped to achieve this.
+ -->
+
+
+
+
+
+
+
+
+
+<!-- Page fade in effect:
+
+To enhance the website, a fade in effect when a page loads was added to every page. This was achieved with Javascript and fades in the page while it loads, rather than an abrupt, default load.
+
+ The <script> </script> tag embeds Javascript code. Between this, the function code (in purple), set’s the function or procedure of how the code will work; by fading in the page, this is set by: (fadeInPage() {. The if (in purple), states whether a code will run, if the set condition is true. To further explain this, the procedure (set by the function), will only work ‘if’ the stored information in var (variable) which holds data of the code, is true. All of this information combined performs the desired effect with the code. The var holds the information, and the document.getElementById is the ID attribute for the element ('fader').
+
+This code was used as is was the only one that worked in achieving the desired effect of fading in the pages and is from the website https://christopheraue.net/design/fading-pages-on-load-and-unload
+
+The <svg> tag is useful as for images, with this code they can be sclaed at different sizes but won't lose quality. SVG (scalable vector graphics), also allow elements to be animated.
+
+-->
+
+
+
+  <svg id="fader"></svg>
+         <script>
+             fadeInPage();
+
+             function fadeInPage() {
+               if (!window.AnimationEvent) { return; }
+               var fader = document.getElementById('fader');
+    fader.classList.add('fade-out');
+}
+         </script>
+
+
+
+
+
+
+
+
+
+<!-- Navbar: The navbar uses some javascript with the <script> tag, to ensure that it is responsive for desktop and includes a drop-down menu effect. The function coding underneath the <script> tag, achieves this by providing the function or procedure to the drop-down menu, telling it how it will work (in being responsive and having the drop down menu effect), with how it should outcome. Again, this only works depending on the condition that is set by 'else'. With this code, the procedure set by the function will work, (if) based on the condition, in this case 'else'; which is if the condition is false.
+
+To summarise, 'if' and 'else' carry out operations, depending on various conditions.
+
+Aside this, the 'one click="myFunction()"', set's the function that in one click (when the nav bar is clicked on), the function (named as myFunction() which makes the nav bar responsive and have a drop-down effect), will work.
+
+This coding was most suitable and chosen as it ensures that the nav bar is responsive and will adapt to desktop and mobile screens, aside this it offers the desired drop-down effect that was appropriate for the additional page option pages (it makes it easier for the user to find the other page options, such as to turn the page to dark mode). The nav bar directs the user to every page within the website, therefore it was important for the nav bar to be sectioned and spaced out well (all the links to have a distance to be easily clicked on etc.)
+
+
+The coding is from the website: https://www.w3schools.com/howto/howto_js_responsive_navbar_dropdown.asp -->
+
+
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">⌂</a>
+  <a href="page1.html">The Ancient Egyptions</a>
+  <a href="page2victorian.html">The Victorian Era</a>
+  <a href="page3elizabethan.html">The Elizabethan Era</a>
+  <a href="page4modern.html">Today</a>
+  <div class="dropdown">
+  </div>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div style="padding-left:16px">
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+
+
+<!-- The <br> tag is a simple addition that spaces out content on a page when placed between elements. It provides some spacing which is useful in making sure the content on a page is not cramped too closely together. This is the only known code that works to achieve this. -->
+
+
+<br>
+
+
+
+
+
+    <!-- Header: The header of the website is an image added using the <img> tag and is the logo of the website (alt="logo"). It is placed within a <div> tag as this tag helps to divide everything on a page into sections, making the page easier to manage and code. Other codes could of been used such as <section> and <aside>, but <div> is the default and well-known option appropriate to the content of the page.
+
+It is important when including images to use the 'alt' attribute, as this essentially gives the image a name or more information, so that it can be more easily identified and manipulated in css.
+  -->
+
+      <div class="Header">
+
+      <img src= "image/mainlogo.jpg" alt="logo">
+
+      </div>
+
+
+
+
+<!-- a href: The a href attribute creates a link to another page. In this instance, it has been added to an image of a Twitter Icon. The code works as when the image (the Twitter icon) is clicked on, it takes the user to the link added by the a href attribute (the Twitter page of the website.)
+
+Another method of adding social media buttons was attempted, using code from the website https://www.w3schools.com/howto/howto_css_social_media_buttons.asp. The final outcome of adding a social media button using this code was not the best, as it offers a square or round button. This was not the desired final look and therefore, using the a href attribute on a transparent image of a Twitter icon, was the next best option to achieve this.
+
+-->
+
+
+
+
+  <a href="https://twitter.com/TheHistoryOfMa1"><img src="image/twitter.png" alt="twitterlogo" style="width:50px;height:50px; float: left;  "></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ID: Using the id attribute was ideal, as it gives an element a specific name, for simple styling in CSS using a # and the id given to the element. This code is similar to the alt attribute, however the alt attribute is most suitable for images, therefore the id attribute was chosen to be used for elements such as <h4> and <p> (text). -->
+
+
+    <h4 id="aeh">The Ancient Egyptions</h4>
+
+
+
+
+
+
+<!-- For this button, the "window.location", directs the website to another page ('page1.html'). This works when the button is pressed (oneclick), it takes the user to the set window location, being page1.html.-->
+
+
+
+
+
+<div class="buttonread">
+<center>
+    <button id="buttonhome" onclick="window.location='page1.html'">Read about the ancient egyptions now</button>
+
+</center>
+
+</div>
+
+
+
+<!--myHeader-->
+
+
+
+          <div class="header" id="myHeader">
+
+
+
+
+
+
+<!-- Buttons: The 'oneclick' portion of this code, tells the element (the buttons), that in one click, the responsive image gallery will change layout to the set layout. -->
+
+
+
+            <button class="btn" onclick="one()">1</button>
+            <button class="btn" onclick="two()">2</button>
+            <button class="btn" onclick="three()">3</button>
+          </div>
+
+
+
+
+<!-- Callout: To add more interactive elements to the website, a pop up box known as a callout message was added to the home pages of the website, it was used as a pop up fun fact. The <span> tag used, is essentially an inline container, that is similar to the <div> tag. This code was the best option to use as the box can be closed by pressing the X. This happens with the code oneclick = "parentElement.style.display='none';">x< (it tells the browser that when the x is pressed, the whole callout container will close.)
+
+This code was taken from https://www.w3schools.com/howto/howto_js_callout.asp -->
+
+
+
+
+
+          <div class="callout">
+            <div class="callout-header">Fun Fact!</div>
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+            <div class="callout-container">
+              <p>Did you know Cleopatra wasn't actually egyption. She was part of a long line of Greek Macedonians? <a href="https://www.history.com/news/11-things-you-may-not-know-about-ancient-egypt">Learn more</a> or press X and continue!</p>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+<!-- Photo Grid: As the prototype was developed around the basis of using a responsive image gallery, the coding that was used was from the website: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_image_grid. The grid was constructed to showcase a series of images relating to the topic (the time period). The buttons change the layout of the images. This particular grid was chosen as it refletcs the design of the prototype originally made for the website. It was made sure every image has an alt attribute, which gives the image a name and helps when testing the website, to easily locate any mistakes within the code by locating with the given alt attribute name.
+
+Next to the alt attribute, the style = width, came with the code. This was ideal as it was changed to ensure the images will be responsive for the RIG to work on all devices and screen sizes. It was changed to style="max-width:100%". The max-width is the maximum width, and it was set to 100% to make sure that the image will scale down for smaller screens, but not enlarge in size from it’s original size for the image to not appear distorted on desktop screens. Setting it to 100% ensures that the image will stay the same size and not increase in size. Using the usual width tag, would not ensure that the images don't become distorted on wider screens, and it was an aim to make sure the website is responsive for desktop, therefore max-width was the best option. Alongside this, in the prototype it was stated the images would enlarge when clicked, however with this particular RIG, it makes the images a large size with the first layout, therefore the images did not need to be clicked on to be enlarged when in the first layout they become a big size and the same images are used.
+
+-->
+
+
+
+
+<!-- Photo Grid -->
+
+    <div class="row">
+        <div class="column">
+          <img src="image/egyption-royal.jpg" alt="royal" style="max-width:100%">
+          <img src="image/egypt-cleo.jpg" alt="cleo" style="max-width:100%">
+          <img src="image/fashionegypt.jpg" alt="fashion" style="max-width:100%">
+            <img src="image/cat-mummy.jpg" alt="cat" style="max-width:100%">
+
+        </div>
+        <div class="column">
+          <img src="image/egypt-3.jpeg" alt="egypt1" style="max-width:100%">
+          <img src="image/cleopatrajpg.jpg" alt="cleopatra1" style="max-width:100%">
+          <img src="image/egypt-2.jpg" alt="egypt2" style="max-width:100%">
+
+        </div>
+        <div class="column">
+          <img src="image/egyption-royal.jpg" alt="royal" style="max-width:100%">
+          <img src="image/egypt-cleo.jpg" alt="cleo" style="max-width:100%">
+          <img src="image/fashionegypt.jpg" alt="fashion" style="max-width:100%">
+            <img src="image/cat-mummy.jpg" alt="cat" style="max-width:100%">
+
+
+        </div>
+        <div class="column">
+          <img src="image/egypt-3.jpeg" alt="royal1" style="max-width:100%">
+          <img src="image/cleopatrajpg.jpg" alt="cleopatra1" style="max-width:100%">
+          <img src="image/egypt-2.jpg" alt="egypt2" style="max-width:100%">
+
+
+
+
+
+<!-- Javascript RIG: The javascript for the RIG, provides the function of changing layout to the appropriate sizing for the images to fit the columns and layout for the gallery, when the appropraite button is pressed. The var (variable), holds value of data that can vary. The function, provides the function or the procedure of change for each layout of images (two images side by side or four images side by side etc.) The style.flex adds to the function of what size the images will change to, to fit the gallery (="100%", ="50%" etc.). -->
+
+
+
+
+
+      </div>
+
+      <script>
+
+      var elements = document.getElementsByClassName("column");
+
+          // A loop variable was declared (var i;) as this is useful when the same code is being repeated multiple times (the rows of images). It helps the browser with repeated orders. Using 'var', is essentially declaring a variable; the value of the variable for this code being (i = 0;). This is also useful when using an array, which holds more than one single value. Each grid of images is set by the given function, with a name (function one, function two, function three), so each grid functions by changing to the correct sizing (each set by .style.flex = "(chosen size)%";). //
+
+      var i;
+
+      // Full-width images
+      function one() {
+          for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "100%";
+          elements[i].style.flex = "100%";
+        }
+      }
+
+      // Two images side by side
+      function two() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "50%";
+          elements[i].style.flex = "50%";
+        }
+      }
+
+      // Four images side by side
+      function three() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "25%";
+          elements[i].style.flex = "25%";
+        }
+      }
+
+
+
+
+// The added "active" class, creates the effect that when the button is clicked, the function (set to highlighting the button that is pressed), will work, with the value the var is set to, and the .getElementsByClassName get's the element with the ID attribute ("btn"), to be that set value. //
+
+
+
+
+      var header = document.getElementById("myHeader");
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+      </script>
+
+</div>
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+
+
+
+<!-- Footer: The footer in the CSS, makes the effect of a sticky footer, in which the footer is in position with the user's scrolling. It was decided to make the footer 'sticky', as buttons are placed inside, for the user to be able to go to the previous or next page, without having to scroll to the bottom of the page to find the buttons, (with the sticky footer the buttons essentially follow the user, for them to click at any time). A footer is a common addition to a website which usually can provide links and information about the website. It was added using a <div> tag as this is a container element. -->
+
+
+
+
+
+<div class="footer">
+
+<div class="Next Button">
+<a href="home2.html" class="buttonone">Next </a>
+</div>
+
+<p id="mell"> Melisa Vasileva
+P2521107
+</p>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+  </body>
+</html>

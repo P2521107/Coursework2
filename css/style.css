@@ -1,0 +1,2672 @@
+body {
+  background-color: #f1f1f1;
+  margin: 0;
+    font-family: "Roboto Slab";
+    font-weight: 300;
+    color: #333;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+
+
+/* Some simple styling to the body for most of the pages, setting the background colour (to #f1f1f1;), and changing the font of the pages to "Roboto Slab", using the 'font-family' CSS property. The text-rendering tells the browser how to render the text on pages on the screen. It can change the quality of how text looks on screen. This is important to make sure the text looks good on screen. */
+
+
+
+
+
+/* Responsive Image Gallery: */
+
+
+* {
+  box-sizing: border-box; /*This attribute basically allows padding and border to be included in the height and width, helping with responsiveness. */
+}
+
+.header {
+  text-align: center; /*This aligns text to the centre of the screen */
+  padding: 32px; /* Padding adds space. */
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex; /* This set's the display to flex, meaning it will enlarge to fill free space and decrease in size to not overflow the row. This is set because the RIG changes size and this attribute ensures the container adjusts properly when the image gallery is changed as the images change size. */
+  -ms-flex-wrap: wrap; /* The wrap attribute works with the flex items, in whether they stay in a single line or in multiple. This makes the images in the row stacked rather than on a single row. */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* The styling of the column makes two side by side. The sizing is managed by the padding and margin. The padding adds space between the content and border of an element, which can move it's position on screen depending on the set number with the px;. The margin adds space around an elements border which can also re position something on the screen. The display attributes, states the type of rendering for display value; how it will display on screen. */
+
+.column {
+  -ms-flex: 50%;
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px; /* This adjusts the margin space but only the top (margin-top) */
+  vertical-align: middle; /* This attribute vertically aligns the column images to the middle, as the RIG wouldn't look good overall not positioned in the middle. */
+}
+
+/* Styling of the buttons, setting the colours and sizing of the boxes with the padding.  */
+
+.btn {
+  border: none;
+  outline: none; /* The 'none' usually means to hide. In this case, the outline and border has been set to none, so it does not show on the buttons.  */
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page1 */
+
+
+
+
+
+/* Header or logo: to make sure the logo does not appear distorted and the image doesn't lose it's quality when the screen sizing changes, the max-width css property ensures the element does not become larger than the set width (100%), which ensures the image will change size appropriate to the scale sizing of the screen. This is useful in making sure the website is responsive for desktop screens. */
+
+
+
+img {
+
+  max-width: 100%;
+
+  display: block; /* display: block; simply means the element is displayed as a block and nothing else can be positioned to the left or right of it. This is useful for this img (image) as it is the header of the website and it is supposed to stand on it's own line. */
+
+  margin-left: auto;
+
+  margin-right: auto; /* Combining margin-left and margin-right (set to auto;), ultimately centres the element on screen, in this case the image. */
+
+}
+
+
+
+
+
+
+
+/* Navbar: The navbar was styled to have the same colour in the header (logo) of the website, to follow the same colour scheme throughout, in light of reflecting the theme of the website.(backround-color: #e8c3c0;) */
+
+
+.topnav {
+  overflow: hidden; /* With the overflow set to hidden, this means when content overflows the element box, the content will be hidden and not visible to the user. This is useful in making sure the content doesn't appear to be overflowing, such as the text to not flow over the box. */
+  background-color: #e8c3c0;
+}
+
+
+/* The float: left attribute positions an element to the left of a screen. If it is float: right, it will position the element to the right of the screen. */
+
+
+.topnav a {
+  float: left; /* The elements in the drop down are positioned to the left.*/
+  display: block;
+  color: #f2f2f2;
+  text-align: center; /* Aligns the text to the centre. */
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #b1b6b4;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+
+
+/* The display: none; attribute, hides the element. While the position set to absolute (position: absolute;), set's the positioning of the element to be absolute, which withdraws the element from the document flow.
+
+https://teamtreehouse.com/community/when-do-i-use-absolute-positioning-and-when-do-i-use-relative-positioning
+
+ */
+
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #e8c3c0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
+/* Media Queries: Media queries help in making a responsive website. It set's a rule for when styling in CSS should be applied. In this instance, the media query was set so that (the rule) when the size of a screen reaches (max-width: 678px), the nav bar will change (styled by CSS to change it's formation to fit the set size better.)  It makes content adapt to different states, such as screen size. It was an important element to add to the navbar code to ensure the navbar adjusts it's size to fit across the legnth of every screen, espeically to be responsive for a desktop screen. This was the most suitable code to use in changing the styling of the nav bar when the screen reaches a certain point/size. The nav bar was tested to see at what point does the text in the nav bar start to overflow, this happened when the screen would reach 678px and therefore the max-width was set to 678px (the sizing changes at that point so the text doesn't over-flow). */
+
+
+
+
+
+@media screen and (max-width: 678px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ripped paper: The max-width again was set to 100% to make the element responsive as it will stay the same size across all screens. Some of the values were changed to adapt the effect of the ripped paper. */
+
+
+
+.content-main {
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+
+}
+.content-main .content-box {
+  height: auto;
+  overflow: hidden;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+.content-main .content-box:before, .content-main .content-box:after {
+  content: "";
+  height: 1px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-clip-path: polygon(0% 0%, 5% 100%, 10% 0%, 15% 100%, 20% 0%, 25% 100%, 30% 0%, 35% 100%, 40% 0%, 45% 100%, 50% 0%, 55% 100%, 60% 0%, 65% 100%, 70% 0%, 75% 100%, 80% 0%, 85% 100%, 90% 0%, 95% 100%, 100% 0%);
+}
+.content-main .content-box:before {
+  background-color: #eee;
+  top: 0;
+}
+.content-main .content-box:after {
+  background-color: #fff;
+  bottom: -2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Image Modal of Cleopatra */
+
+
+/* The set ID attribute in the html pages, is styled here with a # and the id name. */
+
+
+#cleoimage {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s; /* The amount of time set for the hover effect to work when the cursor goes over the image. */
+}
+
+#cleoimage:hover {opacity: 0.7;}
+
+
+/* The image modal works by when the image is clicked on, the modal background will appear at a full width and height and acts like a box, with an enlarged version of the image inside with a caption, talking about the image. Before clicking when the cursor goes over the image, it creates a hover effect. */
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* 'None' essentially means hide, in which hides the element (the modal background) before the image is clicked on, as it is only supposed to open when the image has been clicked. */
+  position: fixed; /* This fixes the positioning of the element (the modal background) to stay in place (fixed). */
+  z-index: 1; /* The Z order helps to position elements. */
+  padding-top: 100px; /* Padding adds space (from the top by 100%) to position the modal. */
+  left: 0;
+  top: 0;
+  width: 100%; /* At 100% means full width. */
+  height: 100%; /* At 100% means full height. */
+  overflow: auto; /* Set to auto, this allows scrolling. */
+  background-color: rgb(0,0,0); /* Set's the background colour of the modal. */
+  background-color: rgba(0,0,0,0.9);
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto; /* This means the browser will set the margin automatically (auto). */
+  display: block;
+  width: 80%;
+  max-width: 700px; /* With this set to 700px;, the image expands in width to 700px when clicked on. */
+}
+
+/* Caption of the Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px; /* The max-width of the text matches the width of the image so it matches in size. */
+  text-align: center; /* Aligns the text to the centre. */
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* This adds the animation to the image. By setting the duration in which the amimation will work (animation-duration: 0.6s;) */
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+
+/* Key frames create animations in setting values for how the animation gradually occurs throughout (how it starts 'from' the closed scale (0)), 'to' open at open scale (1), which opens the image.
+
+from = where the animation starts
+to = where the animation ends
+
+
+ */
+
+
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* With the @media, this creates a rule for the styling that the image will be at a width of 100% when opened on screen sizes with a max-width of 700px. This ensures the image will adapt size to look good on smaller and larger screens; achieving responsiveness. It also makes sure the image won't appear distorted if the screen adapts to a different size. */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page 1 content: The ID changes the styling of the specific element with the name of the set ID. The styling here, changes the font size and boldness of the font (font-weight). The margin property creates space around an element, for this text, it is only set to create space at the bottom by 20px (margin-bottom: 20px;). The text-align: center; property, aligns the text to be at the centre of the page. */
+
+
+
+
+#aeh {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#aet {
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pagination */
+
+
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+
+}
+
+
+
+
+
+/* The 'active' attribute here in CSS, changes the background colour of the set number in the pagination (which is set to the number of the page.) This makes it known to the user what page they are on, as the page number they are on is set to a different colour to the rest, using the property 'background-color'.  */
+
+
+
+.pagination a.active {
+  background-color: #e8c3c0;
+  color: white;
+}
+
+
+/* Here the styling is set so that when the pagination is hovered over (except the number that is active), it fades to another colour, set by the background colour attribute. */
+
+
+
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Pagination for black pages */
+
+.pagination2 {
+  display: inline-block;
+}
+
+.pagination2 a {
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+
+}
+
+.pagination2 a.active {
+  background-color: #e8c3c0;
+  color: white;
+}
+
+.pagination2 a:hover:not(.active) {background-color: #ddd;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page 1 enlarged text content */
+
+#aeth {
+  font-weight: 400;
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#aett {
+  font-size: 40px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+#black {
+background-color: black;
+
+}
+
+
+
+/* Black pages: The body of the black pages have the same ID set as #black, so that the background-color is changed on all these pages as black. */
+
+
+
+
+
+
+
+
+
+#aebh {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+#aebt {
+  font-size: 20px;
+  color: white;
+  padding: 35px;
+    text-align: center;
+
+}
+
+
+
+
+
+
+/* Border for black and yellow pages: The border-style set's the style of the border (solid), with the colour added by border-color, set to white. The margin adds space so the text inside the borders is positioned more in the centre. */
+
+
+
+
+
+p.one {
+  border-style: solid;
+  border-color: white;
+  margin: 20px;
+}
+
+
+
+
+
+
+/* Page 1 yellow page content
+https://www.cs.cmu.edu/~jbigham/pubs/pdfs/2017/colors.pdf
+*/
+
+
+#aeyh {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+}
+
+#aeyt {
+  font-size: 20px;
+  color: black;
+   padding: 35px;
+   text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Image Modal of Victoria */
+
+#vicimage {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+
+
+
+
+
+#vicimage:hover {opacity: 0.7;}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Image Modal of Make-up */
+
+
+
+
+
+
+
+
+#modernmu {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#modernmu:hover {opacity: 0.7;}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Image Modal of Elizabeth */
+
+
+
+
+
+#eliimage {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#eliimage:hover {opacity: 0.7;}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+.modal-content, #caption {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page 2 Victorian Era content */
+
+
+
+
+#veh {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#vet {
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page 2 Victorian Era black page content */
+
+
+
+
+#vebh {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+#vebt {
+  font-size: 20px;
+  color: white;
+  padding: 35px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page 2 Victorian Era text content */
+
+
+
+
+#veth {
+  font-weight: 400;
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#vett {
+  font-size: 40px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Page 2 Victorian Era yellow page content */
+
+
+
+#yellow {
+background-color: #fffd99;
+
+}
+
+
+
+#veyh {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+}
+
+#veyt {
+  font-size: 20px;
+  color: black;
+  padding: 35px;
+  text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page 3 Elizabethan Era black page content */
+
+
+
+
+#eebh {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+#eebt {
+  font-size: 20px;
+  color: white;
+  padding: 35px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page 3 Elizabethan Era content */
+
+
+
+
+#eeh {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#eet {
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page 3 Elizabethan Era text content */
+
+
+
+
+#eeth {
+  font-weight: 400;
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#eett {
+  font-size: 40px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* Page 3 Elizabethan Era yellow content */
+
+
+
+
+
+
+
+#eeyh {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+}
+
+#eeyt {
+  font-size: 20px;
+  color: black;
+   padding: 35px;
+   text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page 4 content */
+
+
+
+
+#meh {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#met {
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page 4 black page content */
+
+
+
+
+#mebh {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+#mebt {
+  font-size: 20px;
+  color: white;
+  padding: 35px;
+  text-align: center;
+}
+
+
+
+/* Page 4 yellow page */
+
+
+
+
+#meyh {
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+}
+
+#meyt {
+  font-size: 20px;
+  color: black;
+  padding: 35px;
+  text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page 4 text page */
+
+
+
+
+
+
+
+
+#meth {
+  font-weight: 400;
+  font-size: 60px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#mett {
+  font-size: 40px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar for Victorian Era */
+
+
+.topnav2 {
+  overflow: hidden;
+  background-color: #e8c3c0;
+}
+
+.topnav2 a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #b1b6b4;
+  color: white;
+}
+
+.topnav2 .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #e8c3c0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav2 a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 678px) {
+  .topnav2 a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav2 a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .topnav2.responsive {position: relative;}
+  .topnav2.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav2.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav2.responsive .dropdown {float: none;}
+  .topnav2.responsive .dropdown-content {position: relative;}
+  .topnav2.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar for Elizabethan Era */
+
+
+.topnav3 {
+  overflow: hidden;
+  background-color: #e8c3c0;
+}
+
+.topnav3 a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #b1b6b4;
+  color: white;
+}
+
+.topnav3 .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #e8c3c0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav3 a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 678px) {
+  .topnav3 a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav3 a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .topnav3.responsive {position: relative;}
+  .topnav3.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav3.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav3.responsive .dropdown {float: none;}
+  .topnav3.responsive .dropdown-content {position: relative;}
+  .topnav3.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar for Modern Era */
+
+
+.topnav4 {
+  overflow: hidden;
+  background-color: #e8c3c0;
+}
+
+.topnav4 a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #b1b6b4;
+  color: white;
+}
+
+.topnav4 .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #e8c3c0;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav4 a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 678px) {
+  .topnav4 a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav4 a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .topnav4.responsive {position: relative;}
+  .topnav4.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav4.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav4.responsive .dropdown {float: none;}
+  .topnav4.responsive .dropdown-content {position: relative;}
+  .topnav4.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+
+
+
+/* Slideshow: The slideshow works by pressing the next or previous buttons to change to the next or previous slide. */
+
+
+* {box-sizing: border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* This overall styles the box (the slideshow container), and hides the display again as it is set to 'none.' The images are set to (vertical-align: middle), which aligns the whole slideshow to the centre (the middle).
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px; /*The max-width set to 100% fills the whole width of the screen and ensures the slideshow will overall be responsive for desktop screens as it is the maximum width. */
+  position: relative; /* This positions the slideshow relative to it's normal position, giving it slight padding from the border of the screen. */
+  margin: auto; /* The margin is set to auto in which the browser adjusts the margin automatically, to achieve the right sizing for the slideshow. */
+}
+
+
+/* Next & previous buttons: The buttons are styled with the positioning and sizing of the boxes.*/
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* This adds the effect when the button is hovered over, it adds a black colour background. */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation with the duration of how long it lasts (1.5s). */
+.fade {
+  -webkit-animation-name: fade; /*The fade effect*/
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/* This media rule is important so that the text size will decrease (to 11px), when on a smaller screen (such as a mobile screen) at the size of 300px;. It makes the slideshow responsive. */
+
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Next and Previous Buttons */
+
+
+
+
+
+.buttonone {
+  background-color: #737373;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  float: right;
+  margin: 20px;
+}
+
+.buttonone:hover {opacity: 0.6} /* This added, creates the effect of a hover when the cursor goes over the button. The effect is created as the opacity is set to (0.6), which makes the box a lighter colour when the cursor goes over it, creating the hover effect. */
+
+
+
+
+
+
+
+
+#ft1 {
+align-items: center;
+padding: 10px;
+margin: 10px;
+position: fixed;
+
+
+}
+
+
+
+
+
+
+
+
+
+.btn2 {
+  background-color: #737373;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  float: left;
+  margin: 20px;
+
+
+}
+
+.btn2:hover {opacity: 0.6}
+
+
+
+
+.btn3 {
+  background-color: #737373;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  float: right;
+  margin: 20px;
+}
+
+.btn3:hover {opacity: 0.6}
+
+
+
+
+
+.btn4 {
+  background-color: #737373;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  margin: 20px;
+  float: left;
+}
+
+.btn4:hover {opacity: 0.6}
+
+
+
+
+
+.btn5 {
+  background-color: #737373;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  margin: 20px;
+  float: right;
+}
+
+.btn5:hover {opacity: 0.6}
+
+
+
+
+
+.btn6 {
+  background-color: #737373;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  margin: 20px;
+  float: left;
+}
+
+.btn6:hover {opacity: 0.6}
+
+
+
+
+
+
+/* Home 4 buttons */
+
+
+
+.btn4h {
+  background-color: #737373;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  margin: 20px;
+  float: left;
+}
+
+.btn4h:hover {opacity: 0.6}
+
+
+
+
+
+
+/*Home3 new next button */
+
+
+
+
+.btn44 {
+  background-color: #737373;
+  border: none;
+  color: white;
+  padding: 10px 26px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  margin: 20px;
+  float: right;
+}
+
+.btn4h:hover {opacity: 0.6}
+
+
+
+
+
+
+
+
+
+
+
+#ft3 {
+float: right;
+padding: 10px;
+margin: 10px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+
+
+
+
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #e8c3c0;
+   color: white;
+   text-align: center;
+}
+
+
+
+
+
+
+
+
+#mell {
+float: left;
+padding: 10px;
+margin: 10px;
+
+
+}
+
+
+#mel {
+float: right;
+padding: 10px;
+margin: 10px;
+
+
+}
+
+
+
+
+/* Strip Image set to max-width: 100%; for the image to fill whole width of screen. The max-width was a repetitive choice as it ensures the elements are responsive for desktop screens. */
+
+
+
+.strip {
+
+max-width: 100%;
+
+}
+
+
+
+
+
+/*buttons on home pages */
+
+
+
+
+#buttonhome {
+  background-color: #e8c3c0;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+
+
+}
+
+/* The box shadow attribute creates a shadow effect around the button. */
+
+
+
+#buttonhome {
+  box-shadow: 0 10px 14px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page fade in: The page fade in works by causing a fade effect while the page is opening (on load). For the page fade in effect, the animation-duration was set to (animation-duration: 800ms;), in which is how quickly the fade in effect works (at 800 milliseconds).
+
+
+ https://christopheraue.net/design/fading-pages-on-load-and-unload */
+
+
+
+
+#fader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    pointer-events: none;
+      background: white;
+      animation-duration: 800ms;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+/* @keyframes: keyframes essentially create animations by gradually changing CSS styles. As animations are gradual in achieving it's full effect. Here, the styles are set from how it will fade-out and fade-in to create the final effect of the page fading in on load. The opacity 'from' is set to 1 ( { opacity:1 } ), which is the start of the animation, causing the fade. Then the fade out ( { opacity:0 } ), 'to' set to 0, is how the animation ends, with the opacity set to 0, clearing the fade effect after the set amount of time. This code works with how the code starts 'from', and where it ends 'to'. */
+
+
+@keyframes fade-out {
+    from { opacity: 1 }
+      to { opacity: 0 }
+}
+
+@keyframes fade-in {
+    from { opacity: 0 }
+      to { opacity: 1 }
+}
+
+#fader.fade-out {
+    opacity: 0;
+    animation-name: fade-out;
+}
+
+#fader.fade-in {
+    opacity: 1;
+    animation-name: fade-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hear button: The attributes here style the colour and sizing of the button. */
+
+
+
+
+
+.hearbutton {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #e8c3c0;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.hearbutton:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.hearbuttont {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #e8c3c0;
+  color: white;
+  padding: 14px 28px;
+  font-size: 35px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.hearbuttont:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Hover image */
+
+
+
+
+/* For the hover image to work, the container, image, overlay and text needed to be styled. The container was styled to have a width sizing at 75%. The margin-left: auto; and margin-right: auto;, causes the element to be centered.  */
+
+
+.container {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+
+/* For desktop responsiveness, the max-width was set to 100% again. Alongside this, the height is set to auto;, which means the image element height adjusts automatically. Adding display: block;, set's the element as a block. Then the align-items: center;, centres the element to the centre of the screen. */
+
+
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+
+}
+
+
+/* The overlay has a transition set to: .5s ease; which is the speed the overlay effect over the image works. */
+
+/* The overall effect works by hovering over the image with the cursor, a box fades in, with text, essentially a caption for the image. */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #e8c3c0;
+}
+
+.container:hover .overlay {
+  opacity: 1; /* This gives the value of opacity which creates the overlay effect (set to 1).*/
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+
+/* For the callout pop up box to stay in the same position, the position attribute is set to fixed (position: fixed;). This keeps the element in the same place even when the page is scrolled in any direction.
+
+
+The bottom and right attributes, adjusts the container to be located to the right of the screen, and adjusted to bottom: 100px, to not interfere with the sticky footer by the added space from the bottom (100px;).
+
+
+
+ */
+
+
+
+
+.callout {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  margin-left: 20px;
+  max-width: 300px;
+}
+
+
+.callout-header {
+  padding: 25px 15px;
+  background: #555;
+  font-size: 30px;
+  color: white;
+}
+
+.callout-container {
+  padding: 15px;
+  background-color: #ccc;
+  color: black
+}
+
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: lightgrey;
+}

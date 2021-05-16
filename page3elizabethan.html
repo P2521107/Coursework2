@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CW2 Prototype</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="css/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+
+
+<!--Page fade in-->
+
+
+
+      <svg id="fader"></svg>
+             <script>
+                 fadeInPage();
+
+                 function fadeInPage() {
+                   if (!window.AnimationEvent) { return; }
+                   var fader = document.getElementById('fader');
+        fader.classList.add('fade-out');
+    }
+             </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Header -->
+
+      <div class="Header">
+
+      <img src= "image/mainlogo.jpg" alt="logo">
+
+      </div>
+
+
+
+
+
+
+
+<!-- Navbar-->
+
+
+<div class="topnav3" id="myTopnav3">
+  <a href="index.html" class="active">⌂</a>
+  <a href="page1.html">The Ancient Egyptions</a>
+  <a href="page2victorian.html">The Victorian Era</a>
+  <a href="page3elizabethan.html">The Elizabethan Era</a>
+  <a href="page4modern.html">Today</a>
+  <div class="dropdown">
+    <button class="dropbtn">☰
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="page3text.html">Enlarge Text</a>
+      <a href="page3black.html">Dark mode</a>
+      <a href="page3yellow.html">Yellow mode</a>
+    </div>
+  </div>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div style="padding-left:16px">
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav3");
+  if (x.className === "topnav3") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav3";
+  }
+}
+</script>
+
+
+
+
+
+
+
+<!-- Ripper paper effect -->
+
+
+
+      <div class="content-main">
+                <div class="content-box">
+
+
+
+
+
+
+
+
+                  <!-- Header -->
+
+                  <h4 id="eeh">The Elizabethan Era</h4>
+
+
+
+
+
+  <a href="https://twitter.com/TheHistoryOfMa1"><img src="image/twitter.png" alt="twitterlogo" style="width:50px;height:50px; align-items: center;"></a>
+
+
+
+
+
+
+
+
+
+
+<!-- Elizabethan Era text -->
+
+
+
+           <p id="eet">Through history, the desired look was always to appear pale skinned. The Queen of England Elizabeth I, during her reign between 1558 to when she died in 1603, was the leading model of this fashion trend. Women would create ceruse, which is a mixture of lead and vinegar to apply to the face and neck to create a pale skinned look. When looking at images of Elizabeth I, it is noticeable that her hairline is pulled far back, exposing a large forehead. This most likely occurred due to the lead in the ceruse mixture causing hair loss. During this period, many women died due to lead poisoning, or in extreme cases they would have muscle paralysis which then led to death. Queen Elizabeth I however did not die of lead poisoning, she fell ill and also became severely depressed due to the loss of a few friends during that time. She couldn’t cope and passed away in 1603.  </p>
+
+
+
+<!-- Button for audio -->
+
+
+
+           <button class="hearbutton">🔊Press play to listen to the text🔊
+
+             <br>
+             <br>
+<center>
+<audio controls>
+  <source src="audio/elizabethan-audio.mp4" type="audio/mp4">
+      <source src="audio/elizabethan.m4a" type="audio/m4a">
+Your browser does not support the audio element.
+</audio>
+</center>
+</button>
+
+
+
+
+
+<br>
+<br>
+
+
+
+
+                  <!-- Image Modal -->
+
+
+
+
+
+
+
+                  <img id="eliimage" src="image/queen-elizabeth.png" alt="Sadly Queen Elizabeth the I developed a receding hairline due to the lead and vinegar cosmetics she was applying to achieve the fair skinned look. These ingredients were easily available as vinegar was a cooking ingredient, but in these days not everyone could afford even simple things such as sugar." style="max-width:50%;">
+
+
+
+                  <div id="eliomodal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" alt="elizabethimg" id="img01">
+                    <div id="caption"></div>
+                  </div>
+
+                  <script>
+
+                  var modal = document.getElementById("eliomodal");
+
+
+                  var img = document.getElementById("eliimage");
+                  var modalImg = document.getElementById("img01");
+                  var captionText = document.getElementById("caption");
+                  img.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                  }
+
+
+                  var span = document.getElementsByClassName("close")[0];
+
+
+                  span.onclick = function() {
+                    modal.style.display = "none";
+                  }
+                  </script>
+
+
+<br>
+<br>
+
+
+
+<!--Image Strip -->
+
+
+
+<img src="image/strip.PNG" alt="strip">
+
+
+
+<br>
+<br>
+
+
+
+<!-- Slideshow-->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="image/sseli1.PNG" alt="pp7" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="image/sseli2.PNG" alt="pp8" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="image/sseli3.PNG" alt="pp9" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+<!--Pagination-->
+
+<center>
+              <div class="pagination">
+                <a href="page2victorian.html">&laquo;</a>
+                <a href="page1.html">1</a>
+                <a href="page2victorian.html">2</a>
+                <a class="active" href="page3elizabethan.html">3</a>
+                <a href="page4modern.html">4</a>
+                <a href="page4modern.html">&raquo;</a>
+              </div>
+</center>
+
+
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<!--Footer-->
+
+
+<div class="footer">
+
+<a href="page2victorian.html" class="btn4">Previous </a>
+
+
+
+<div class="footertext">
+
+
+
+
+  <div class="Next Button">
+  <a href="page4modern.html" class="btn5">Next </a>
+  </div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+  </body>
+</html>

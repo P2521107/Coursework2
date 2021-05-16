@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CW2 Prototype</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="css/style.css" type="text/css" rel="stylesheet" />
+  </head>
+<body>
+
+
+<!-- Page fade in effect -->
+
+
+
+    <svg id="fader"></svg>
+           <script>
+               fadeInPage();
+
+               function fadeInPage() {
+                 if (!window.AnimationEvent) { return; }
+                 var fader = document.getElementById('fader');
+      fader.classList.add('fade-out');
+  }
+           </script>
+
+
+
+
+
+
+
+<!-- Navbar -->
+
+
+<div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">⌂</a>
+  <a href="page1.html">The Ancient Egyptions</a>
+  <a href="page2victorian.html">The Victorian Era</a>
+  <a href="page3elizabethan.html">The Elizabethan Era</a>
+    <a href="page4modern.html">Today</a>
+  <div class="dropdown">
+  </div>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div style="padding-left:16px">
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+<!-- Header -->
+
+  <div class="Header">
+
+  <img src= "image/mainlogo.jpg" alt="logo">
+
+  </div>
+
+
+
+
+  <!-- Social media link -->
+
+
+
+  <a href="https://twitter.com/TheHistoryOfMa1"><img src="image/twitter.png" alt="twitterlogo" style="width:50px;height:50px; float: left;  "></a>
+
+
+
+<!-- Header text -->
+
+
+
+    <h4 id="veh">The Victorian Era</h4>
+
+
+
+
+
+<!-- Button -->
+
+
+    <div class="buttonread">
+    <center>
+        <button id="buttonhome" onclick="window.location='page2victorian.html'">Read about the victorian era now</button>
+
+    </center>
+
+    </div>
+
+
+
+
+
+        <!-- Header -->
+        <div class="header" id="myHeader">
+
+
+
+<!-- Buttons -->
+
+
+
+        <button class="btn" onclick="one()">1</button>
+        <button class="btn" onclick="two()">2</button>
+        <button class="btn" onclick="three()">3</button>
+      </div>
+
+
+
+
+
+
+<!-- Callout -->
+
+
+
+                <div class="callout">
+                  <div class="callout-header">Fun Fact!</div>
+                  <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+                  <div class="callout-container">
+                    <p>Did you know Queen Victoria was originally named Alexandria Victoria? <a href="https://www.townandcountrymag.com/society/tradition/a14510744/queen-victoria-facts/">Learn more</a> or press X and continue!</p>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+      <!-- Photo Grid -->
+
+
+
+
+
+
+      <div class="row">
+        <div class="column">
+          <img src="image/victorian-1.jpg" alt="vic1" style="max-width: 100%">
+          <img src="image/queen-victoria.jpg" alt="victoria" style="max-width:100%">
+          <img src="image/vic-shoes.jpg" alt="vicshoes" style="max-width:100%">
+            <img src="image/london.jpg" alt="london" style="max-width:100%">
+
+        </div>
+        <div class="column">
+        <img src="image/victorian-era.jpg" alt="vicera" style="max-width:100%">
+          <img src="image/scene.jpg" alt="scene" style="max-width:100%">
+          <img src="image/dancing.jpg" alt="dancing" style="max-width:100%">
+            <img src="image/city.jpeg" alt="city" style="max-width:100%">
+
+        </div>
+        <div class="column">
+          <img src="image/victorian-1.jpg" alt="vic1" style="max-width: 100%">
+          <img src="image/queen-victoria.jpg" alt="victoria" style="max-width:100%">
+          <img src="image/vic-shoes.jpg" alt="vicshoes" style="max-width:100%">
+            <img src="image/london.jpg" alt="london" style="max-width:100%">
+
+
+        </div>
+        <div class="column">
+        <img src="image/victorian-era.jpg" alt="vicera" style="max-width:100%">
+          <img src="image/scene.jpg" alt="scene" style="max-width:100%">
+          <img src="image/dancing.jpg" alt="dancing" style="max-width:100%">
+            <img src="image/city.jpeg" alt="city" style="max-width:100%">
+
+
+
+
+      </div>
+
+      <script>
+
+      var elements = document.getElementsByClassName("column");
+
+
+      var i;
+
+
+      function one() {
+          for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "100%";
+          elements[i].style.flex = "100%";
+        }
+      }
+
+
+      function two() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "50%";
+          elements[i].style.flex = "50%";
+        }
+      }
+
+
+      function three() {
+        for (i = 0; i < elements.length; i++) {
+          elements[i].style.msFlex = "25%";
+          elements[i].style.flex = "25%";
+        }
+      }
+
+
+      var header = document.getElementById("myHeader");
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+      </script>
+
+
+
+
+</div>
+
+
+
+
+
+
+<br>
+<br>
+
+
+<!-- Footer -->
+
+
+<div class="footer">
+
+
+<a href="index.html" class="btn2">Previous </a>
+
+
+
+
+<a href="home3.html" class="btn3">Next </a>
+
+</div>
+
+<br>
+
+
+  </body>
+</html>
