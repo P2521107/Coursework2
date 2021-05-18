@@ -20,12 +20,12 @@ body {
 
 
 * {
-  box-sizing: border-box; /*This attribute basically allows padding and border to be included in the height and width, helping with responsiveness. */
+  box-sizing: border-box; /*This attribute basically allows padding and border to be included in the height and width, helping with responsiveness to the image gallery. */
 }
 
 .header {
-  text-align: center; /*This aligns text to the centre of the screen */
-  padding: 32px; /* Padding adds space. */
+  text-align: center; /*This aligns the header text to the centre of the screen. */
+  padding: 32px; /* Padding adds space and moves the positioning of an element (everything for the image gallery was positioned to be centre of the screen). */
 }
 
 .row {
@@ -45,7 +45,7 @@ body {
 }
 
 .column img {
-  margin-top: 8px; /* This adjusts the margin space but only the top (margin-top) */
+  margin-top: 8px; /* This adjusts the margin space of the column image, but only the top (margin-top) */
   vertical-align: middle; /* This attribute vertically aligns the column images to the middle, as the RIG wouldn't look good overall not positioned in the middle. */
 }
 
@@ -61,11 +61,11 @@ body {
 }
 
 .btn:hover {
-  background-color: #ddd;
+  background-color: #ddd; /* The background colour of the button effect when the button is hovered over. */
 }
 
 .btn.active {
-  background-color: #666;
+  background-color: #666; /* This is set so the background colour of the button changes when the button is pressed on. */
   color: white;
 }
 
@@ -134,17 +134,17 @@ img {
 
 .topnav a {
   float: left; /* The elements in the drop down are positioned to the left.*/
-  display: block;
-  color: #f2f2f2;
-  text-align: center; /* Aligns the text to the centre. */
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
+  display: block; /* Display: block; simply means the element is displayed as a block and nothing else can be positioned to the left or right of it (the nav bar as it stands on it's own line across the width of the screen). */
+  color: #f2f2f2; /*The set colour for the font.*/
+  text-align: center; /* Aligns the text to the centre in the nav bar. */
+  padding: 14px 16px; /* Padding to keep the text and eveything inside the nav bar, positioned to have space in between each page. */
+  text-decoration: none; 
+  font-size: 17px; /* The font-size of the wording in the nav bar (set to 17px). */
 }
 
 .active {
-  background-color: #b1b6b4;
-  color: white;
+  background-color: #b1b6b4; /* With this attribute, when a button is pressed on (made active), it changes to a different colour. */
+  color: white; /* With this, the colour of the font also changes (to white), to contrast with the new background colour. */
 }
 
 .topnav .icon {
@@ -152,18 +152,18 @@ img {
 }
 
 .dropdown {
-  float: left;
-  overflow: hidden;
+  float: left; /* Positioned to the left with this attribute. */
+  overflow: hidden; /* With the overflow set to hidden, this means when content overflows the element box, the content will be hidden and not visible to the user. This is useful in making sure the content doesn't appear to be overflowing, such as the text to not flow over the dropdown box. */
 }
 
 .dropdown .dropbtn {
-  font-size: 17px;
-  border: none;
-  outline: none;
-  color: white;
+  font-size: 17px; /* The font size set to 17px for the wording in the dropdown. */
+  border: none; /* The drop down set to have no border. */
+  outline: none; /* The drop down set to have no outline. */
+  color: white; /* This set's the font colour (to white.) */
   padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
+  background-color: inherit; /* Inherit means to take (inherit) the values of the parent element. This means is has the same background colour as the parent element which was specified above. */
+  font-family: inherit; /* Again, inherits the same font-family from the parent element. */
   margin: 0;
 }
 
