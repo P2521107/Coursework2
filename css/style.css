@@ -40,8 +40,8 @@ body {
 
 .column {
   -ms-flex: 50%;
-  flex: 50%;
-  padding: 0 4px;
+  flex: 50%; 
+  padding: 0 4px; /* Helps with positioning of the element (the column). */
 }
 
 .column img {
@@ -52,12 +52,12 @@ body {
 /* Styling of the buttons, setting the colours and sizing of the boxes with the padding.  */
 
 .btn {
-  border: none;
+  border: none; /* This attribute set's the buttons to have no border. */
   outline: none; /* The 'none' usually means to hide. In this case, the outline and border has been set to none, so it does not show on the buttons.  */
-  padding: 10px 16px;
-  background-color: #f1f1f1;
-  cursor: pointer;
-  font-size: 18px;
+  padding: 10px 16px; /* This attribute helps in positioning the buttons. */
+  background-color: #f1f1f1; /* Set's the background colour of the buttons. */
+  cursor: pointer; /* This is added as the cursor (set to pointer) is what controls the movement on the screen, and the button will be hovered over and clicked with the cursor. */
+  font-size: 18px; /* Font in the button set to have a font size of 18px. */
 }
 
 .btn:hover {
@@ -65,8 +65,8 @@ body {
 }
 
 .btn.active {
-  background-color: #666; /* This is set so the background colour of the button changes when the button is pressed on. */
-  color: white;
+  background-color: #666; /* This is set so the background colour of the button changes when the button is pressed on (made active). */
+  color: white; /* The font colour changes when the button is pressed on to white. */
 }
 
 
@@ -223,7 +223,7 @@ https://teamtreehouse.com/community/when-do-i-use-absolute-positioning-and-when-
     display: none; /* With this set, it hides and removes the element so that it will not appear on the page. */
   }
   .topnav a.icon {
-    float: right;
+    float: right; /* Part of the nav bar is set to align to the right. */
     display: block;
   }
 }
@@ -293,17 +293,17 @@ https://teamtreehouse.com/community/when-do-i-use-absolute-positioning-and-when-
 
 
 .content-main {
-  position: relative;
-  max-width: 100%;
-  margin: 20px auto;
+  position: relative; /* This attribute makes the positioning of the container relative to it's normal position. */
+  max-width: 100%; /* The maximum width is set to 100% so that the container is responsive for desktop and mobile as it fills the whole width of the screen. */
+  margin: 20px auto; /* The margin attribute fills space to help in positioning the container of the element on the screen (the ripped paper effect.) */
 
 }
 .content-main .content-box {
-  height: auto;
-  overflow: hidden;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+  height: auto; /* The height is set so the browser will automatically adjust the height. */
+  overflow: hidden; /* This attribute will hide if any overflowing of content (text) occurs. */
+  padding: 20px; /* Padding fills space to position the element. */
+  background: #fff; 
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05); /* A shadow effect added to the outline of the content in which makes the ripped paper effect. */
 }
 .content-main .content-box:before, .content-main .content-box:after {
   content: "";
@@ -341,12 +341,12 @@ https://teamtreehouse.com/community/when-do-i-use-absolute-positioning-and-when-
 
 
 #cleoimage {
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 5px; /* The border of the image is set with a radius of 5px. */
+  cursor: pointer; /* This is added as the modal works with the cursor moving over the image and clicking on it. */
   transition: 0.3s; /* The amount of time set for the hover effect to work when the cursor goes over the image. */
 }
 
-#cleoimage:hover {opacity: 0.7;}
+#cleoimage:hover {opacity: 0.7;} /* The hover effect happens as this attribute adds opacity to the image in which makes it appear faded, when the image is hovered over. */
 
 
 /* The image modal works by when the image is clicked on, the modal background will appear at a full width and height and acts like a box, with an enlarged version of the image inside with a caption, talking about the image. Before clicking when the cursor goes over the image, it creates a hover effect. */
@@ -369,22 +369,22 @@ https://teamtreehouse.com/community/when-do-i-use-absolute-positioning-and-when-
 
 /* Modal Content (image) */
 .modal-content {
-  margin: auto; /* This means the browser will set the margin automatically (auto). */
-  display: block;
-  width: 80%;
+  margin: auto; /* This means the browser will set the margin of the image automatically (auto). */
+  display: block; /* The element is displayed as a block so things can't be positioned to the left or right of it, this is useful so other elements don't block the image modal in anyway. */
+  width: 80%; /* The width of the image is set to 80%. */
   max-width: 700px; /* With this set to 700px;, the image expands in width to 700px when clicked on. */
 }
 
 /* Caption of the Modal Image */
 #caption {
-  margin: auto;
+  margin: auto; /* This means the browser will set the margin automatically (auto). */
   display: block;
-  width: 80%;
+  width: 80%; 
   max-width: 700px; /* The max-width of the text matches the width of the image so it matches in size. */
   text-align: center; /* Aligns the text to the centre. */
   color: #ccc;
   padding: 10px 0;
-  height: 150px;
+  height: 150px; 
 }
 
 /* This adds the animation to the image. By setting the duration in which the amimation will work (animation-duration: 0.6s;) */
@@ -519,13 +519,13 @@ to = where the animation ends
 
 
 .pagination {
-  display: inline-block;
+  display: inline-block; /* This attribute allows the height and width of the element to be set. */
 }
 
 .pagination a {
-  color: black;
-  float: left;
-  padding: 8px 16px;
+  color: black; /* The text colour of the pagination is set to black. */
+  float: left; /* This makes it float to the left. */
+  padding: 8px 16px; /* The padding helps in spacing out and positioning the element correctly. */
   text-decoration: none;
 
 }
@@ -540,7 +540,7 @@ to = where the animation ends
 
 .pagination a.active {
   background-color: #e8c3c0;
-  color: white;
+  color: white; /* When the pagination is hovered over, the font colour changes to white. */
 }
 
 
@@ -562,14 +562,14 @@ to = where the animation ends
 
 
 
-/* Pagination for black pages */
+/* Pagination for black pages: The same styling attributes apply from above, the only difference is the colours set for black pages. */
 
 .pagination2 {
   display: inline-block;
 }
 
 .pagination2 a {
-  color: white;
+  color: white; /* The font colour is set to white as the background is black (so the user can see the numbers of the pagination). */
   float: left;
   padding: 8px 16px;
   text-decoration: none;
@@ -724,7 +724,7 @@ https://www.cs.cmu.edu/~jbigham/pubs/pdfs/2017/colors.pdf
 
 
 
-/* Image Modal of Victoria */
+/* Image Modal of Victoria: The same applies from above for every image modal. */
 
 #vicimage {
   border-radius: 5px;
