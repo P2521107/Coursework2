@@ -849,7 +849,8 @@ https://www.cs.cmu.edu/~jbigham/pubs/pdfs/2017/colors.pdf
 
 
 
-/* Image Modal of Make-up */
+/* Image Modal of Make-up: The same applies from above for every image modal. */
+ 
 
 
 
@@ -984,7 +985,7 @@ https://www.cs.cmu.edu/~jbigham/pubs/pdfs/2017/colors.pdf
 
 
 
-/* Image Modal of Elizabeth */
+/* Image Modal of Elizabeth: The same applies from above for every image modal. */
 
 
 
@@ -1110,7 +1111,7 @@ https://www.cs.cmu.edu/~jbigham/pubs/pdfs/2017/colors.pdf
 
 
 
-/* Page 2 Victorian Era content */
+/* Page 2 Victorian Era content. */
 
 
 
@@ -1138,17 +1139,17 @@ https://www.cs.cmu.edu/~jbigham/pubs/pdfs/2017/colors.pdf
 
 
 
-/* Page 2 Victorian Era black page content */
+/* Page 2 Victorian Era black page content: The same applies to every text/content of pages. */
 
 
 
 
 #vebh {
-  font-weight: 400;
-  font-size: 40px;
-  margin-bottom: 20px;
-  text-align: center;
-  color: white;
+  font-weight: 400; /* This set's the weight of the font (to 400.) */
+  font-size: 40px; /* This set's the size of the font (to 40px.) */
+  margin-bottom: 20px; /* This helps position the text as margin helps in the space around an element, this attribute adjusts it from the bottom at 20px. */
+  text-align: center; /* The text is aligned to the centre of the page. */
+  color: white; /* The font colour of the page is set to white. */
 }
 
 #vebt {
@@ -1519,7 +1520,7 @@ background-color: #fffd99;
 
 
 
-/* Navbar for Victorian Era */
+/* Navbar for Victorian Era (the same details apply for every nav bar) */
 
 
 .topnav2 {
@@ -1680,7 +1681,7 @@ background-color: #fffd99;
 
 
 
-/* Navbar for Elizabethan Era */
+/* Navbar for Elizabethan Era, (the same details apply for every nav bar) */
 
 
 .topnav3 {
@@ -1843,7 +1844,7 @@ background-color: #fffd99;
 
 
 
-/* Navbar for Modern Era */
+/* Navbar for Modern Era, (the same details apply for every nav bar) */
 
 
 .topnav4 {
@@ -1974,16 +1975,16 @@ img {vertical-align: middle;}
 
 /* Next & previous buttons: The buttons are styled with the positioning and sizing of the boxes.*/
 .prev, .next {
-  cursor: pointer;
+  cursor: pointer; /* The cursor is set to pointer as the slideshow works with the movement and clicking of the cursor. */
   position: absolute;
   top: 50%;
-  width: auto;
-  padding: 16px;
+  width: auto; /* This attribute tells the browser to adjust the width of the buttons (automatically.) */
+  padding: 16px; /* The padding helps to 'pad' the element in positioning it to the right place (the positioning of the buttons to be padded at 16px (the outcome achieves the buttons being at each side of the slideshow). */
   margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
+  color: white; /* The font of the text in the slideshow is set to white. */
+  font-weight: bold; /* This attribute makes the text bold. */
+  font-size: 18px; /* This set's the size of the font to 18px. */
+  transition: 0.6s ease; /* The speed in which the transition of the buttons work (at 0.6s). */
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
@@ -2001,9 +2002,9 @@ img {vertical-align: middle;}
 
 
 .text {
-  color: #000000;
-  font-size: 15px;
-  padding: 8px 12px;
+  color: #000000; /* The colour of the text set to black. */
+  font-size: 15px; /* Font size set to 15px. */
+  padding: 8px 12px; /* Padding of the text to position. */
   position: absolute;
   bottom: 8px;
   width: 100%;
@@ -2022,17 +2023,17 @@ img {vertical-align: middle;}
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
-  height: 15px;
-  width: 15px;
+  height: 15px; /* The set height of the indicators at 15px. */
+  width: 15px; /* The set weight of the indicators at 15px. */
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease; /* The transition is set to work at a speed of 0.6s. */
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #717171; /* The background colour of the indicator changes when it is hovered over by the cursor. */
 }
 
 /* Fading animation with the duration of how long it lasts (1.5s). */
@@ -2044,6 +2045,7 @@ img {vertical-align: middle;}
 }
 
 
+/* The following sets the journey of the fade for the effect to work, at the rate is starts (from) at an opacity of .4, to where it ends (to) at an opacity of 1. */
 
 
 @-webkit-keyframes fade {
@@ -2082,24 +2084,24 @@ img {vertical-align: middle;}
 
 
 
-/* Next and Previous Buttons */
+/* Next and Previous Buttons. */
 
 
 
 
 
 .buttonone {
-  background-color: #737373;
-  border: none;
-  color: white;
-  padding: 10px 26px;
-  text-align: center;
-  font-size: 16px;
-  margin: 4px 2px;
-  opacity: 1;
-  transition: 0.3s;
-  float: right;
-  margin: 20px;
+  background-color: #737373; /* Background colour of the button. */
+  border: none; /* The button is set to have no border. */
+  color: white; /* This set's the font colour of the button to white. */
+  padding: 10px 26px; /* The padding in positiong the button. */
+  text-align: center; /* The text is aligned to the centre of the button. */
+  font-size: 16px; /* The font size is set to 16px. */
+  margin: 4px 2px; /* The margin of the button which also helps the positioning of the text to look right inside the button. */
+  opacity: 1; /* The opacity level is set to a value of 1. */
+  transition: 0.3s; /* The transition of the fade when hovered over is set to work at the speed of 0.3s/ */
+  float: right; /* Set to float to the right of the screen. */
+  margin: 20px; /* The margin of the button set to 20px. */
 }
 
 .buttonone:hover {opacity: 0.6} /* This added, creates the effect of a hover when the cursor goes over the button. The effect is created as the opacity is set to (0.6), which makes the box a lighter colour when the cursor goes over it, creating the hover effect. */
@@ -2108,6 +2110,9 @@ img {vertical-align: middle;}
 
 
 
+
+
+/* Same text attribute details applied from above. */
 
 
 
@@ -2119,7 +2124,6 @@ position: fixed;
 
 
 }
-
 
 
 
@@ -2569,7 +2573,7 @@ max-width: 100%;
 .container {
   position: relative;
   display: block;
-  margin-left: auto;
+  margin-left: auto; /* The margin-left and margin-right attributes combined aligns the element to the centre. */
   margin-right: auto;
   width: 75%;
 }
